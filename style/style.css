@@ -33,10 +33,13 @@ html::-webkit-scrollbar-thumb {background-color: var(--main-color); border-radiu
 body{ font-family: 'Pretendard', sans-serif; font-weight:400; font-size: 16px; letter-spacing: -0.04em; }
 section{ display:block; }
 a{ color:inherit; }
+a:hover{ text-decoration: none; color: inherit;  }
 
-.inner{ width:1200px; margin:0 auto; }
+.inner{ width:1200px; margin:0 auto;  }
 
-.paging_box{ padding:10px 0; display:flex; align-items: center; justify-content: center; }
+.paging_box{ margin-top: 20px; padding:10px 0; display:flex; align-items: center; justify-content: center; }
+.paging_box .pg_page{ background-color:#FFF; border:1px solid #e6e6e6; }
+.paging_box .pg_current{ background-color: #0F1C2E; color:#fff; border:1px solid #0F1C2E; }
 
 select{
     -webkit-appearance: none; -moz-appearance: none;  appearance: none;
