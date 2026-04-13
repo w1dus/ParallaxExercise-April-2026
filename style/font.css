@@ -49,3 +49,15 @@
     font-weight: 900;
     font-style: normal;
 }
+
+/* Goldenbook */
+@import url(https://db.onlinewebfonts.com/c/48188dfba797eefc6697161d28cb2a22?family=Goldenbook+W01+Bold);
+@font-face {
+    font-family: "Goldenbook";
+    src: url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.eot");
+    src: url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/48188dfba797eefc6697161d28cb2a22.svg#Goldenbook W01 Bold")format("svg");
+}
