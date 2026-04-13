@@ -102,3 +102,18 @@ p{ word-break: keep-all; }
 @media screen and (max-width: 650px) { 
     .main .section2 .text-box img{ height: 6vw; }
 }
+
+/* .main .section3 */
+.main .section3{ text-align: center; min-height: 100vh; padding: 100px 0; display: flex; align-items: center; justify-content: center; }
+.main .section3 .text-box{ line-height: 1.5em; font-size: 50px; font-weight: 700; }
+.main .section3 .text-box .text-wrap{ display: flex; justify-content: center; }
+.main .section3 .text-box .text-wrap .active-text{ position: relative; overflow: hidden; color: rgb(54, 54, 197); }
+.main .section3 .text-box .text-wrap .active-text .cover{  transform-origin: left center; transform: scaleX(0); width: 100%; position: absolute; left: 0; top: 0;  height: 100%; background-color: rgb(54, 54, 197); }
+.main .section3.on .text-box .text-wrap .active-text .cover { animation: coverFillThenShrinkRight 1.2s ease-in-out forwards; }
+
+@keyframes coverFillThenShrinkRight {
+    0% { transform-origin: left center; transform: scaleX(0); }
+    49.9% { transform-origin: left center; transform: scaleX(1); }
+    50% { transform-origin: right center; /* 줄어들기 시작 기준 변경 */ transform: scaleX(1); }
+    100% { transform-origin: right center; transform: scaleX(0); }
+}
