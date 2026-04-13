@@ -1,14 +1,49 @@
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+    
     section1ScrollHandler();
-
+    section2ScrollHandler();
 })
 
+const section2ScrollHandler = () => {
+    const section = document.querySelector(".main .section2");
+    if (!section) return;
+    const triggerEl = section.querySelector(".scroll-event");
+    if (!triggerEl) return;
+
+    const tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+            trigger: section, 
+            start: "top top",
+            end: "+=250%", 
+            scrub: true, 
+            pin: section,
+            anticipatePin: 1, 
+            invalidateOnRefresh: true 
+        }
+    });
+    tl.fromTo(
+        ".main .section2 .text-box.text1 .active-text",
+        { width: "0%" }, //from
+        { width: "100%", duration: 1 }, //to
+        0
+    )
+    .fromTo(
+        ".main .section2 .text-box.text2 .active-text",
+        { width: "0%" },
+        { width: "100%", duration: 1 },
+        1
+    );
+    
+}
 
 const section1ScrollHandler = () => {
-    const section = document.querySelector(".section1");
+    const section = document.querySelector(".main .section1");
+    if (!section) return;
     const triggerEl = section.querySelector(".scroll-event");
+    if (!triggerEl) return;
     /* 
         1. 초기 상태 (초기 상태 먼저 잡아줘야 함) 
         autoAlpha는 gasp속성으로 opacity + visibility를 같이 제어하는 축약 옵션 
